@@ -1,0 +1,56 @@
+2025-01-12 21:37:16,595 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 21:37:16,595 - __main__ - INFO - Database file not found, creating new one
+2025-01-12 21:37:16,611 - __main__ - INFO - Successfully created database file: material_inspections.db
+2025-01-12 21:37:16,611 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 21:37:16,612 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 21:37:16,612 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 21:37:16,612 - __main__ - INFO - Running on Windows system
+2025-01-12 21:37:16,612 - __main__ - INFO - Checking system environment...
+2025-01-12 21:37:16,612 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 21:37:16,612 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 21:37:16,627 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 21:37:16,628 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 21:37:16,628 - __main__ - INFO - Database connection verified
+2025-01-12 21:37:22,519 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:37:22,529 - __main__ - ERROR - Error serving index page: index.html
+2025-01-12 21:37:24,505 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:37:24,505 - __main__ - ERROR - Error serving index page: index.html
+2025-01-12 21:40:02,712 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 21:40:02,712 - __main__ - INFO - Dropping existing tables
+2025-01-12 21:40:02,729 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 21:40:02,729 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 21:40:02,729 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 21:40:02,729 - __main__ - INFO - Running on Windows system
+2025-01-12 21:40:02,729 - __main__ - INFO - Checking system environment...
+2025-01-12 21:40:02,729 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 21:40:02,729 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 21:40:02,745 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 21:40:02,745 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 21:40:02,745 - __main__ - INFO - Database connection verified
+2025-01-12 21:40:02,745 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 21:40:02,745 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 21:42:25,393 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 21:42:25,393 - __main__ - INFO - Dropping existing tables
+2025-01-12 21:42:25,427 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 21:42:25,431 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 21:42:25,432 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 21:42:25,432 - __main__ - INFO - Running on Windows system
+2025-01-12 21:42:25,432 - __main__ - INFO - Checking system environment...
+2025-01-12 21:42:25,432 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 21:42:25,434 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 21:42:25,437 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 21:42:25,437 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 21:42:25,438 - __main__ - INFO - Database connection verified
+2025-01-12 21:42:25,439 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 21:42:25,440 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 21:44:35,544 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:44:35,546 - __main__ - ERROR - Error serving index page: index.html
+2025-01-12 21:51:37,419 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:51:37,420 - __main__ - ERROR - Error serving index page: index.html
+2025-01-12 21:54:53,231 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:54:54,812 - __main__ - DEBUG - Found 0 records
+2025-01-12 21:54:56,541 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:55:12,707 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-12 21:55:12,997 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 21:55:13,717 - __main__ - DEBUG - Found 1 records
+2025-01-12 21:55:14,662 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20/ht983445

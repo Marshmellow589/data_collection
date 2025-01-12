@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sea Horse - Material Inspection Records</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sea Horse - Material Inspection Records</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Report Number</th>
+                <th>Material Type</th>
+                <th>Material Grade</th>
+                <th>Thickness</th>
+                <th>Size</th>
+                <th>Inspection Date</th>
+                <th>Status</th>
+                <th>Heat Number</th>
+                <th>Mill Certificate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.report_number }}</td>
+                <td>{{ record.material_type }}</td>
+                <td>{{ record.material_grade }}</td>
+                <td>{{ record.thickness }}</td>
+                <td>{{ record.size }}</td>
+                <td>{{ record.inspection_date.strftime('%Y-%m-%d') }}</td>
+                <td>{{ record.inspection_status }}</td>
+                <td>{{ record.heat_number }}</td>
+                <td>
+                    {% if record.mill_cert_attachment %}
+                        <a href="/uploads/{{ record.mill_cert_attachment }}" target="_blank">View</a>
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="/print/{{ record.report_number }}" target="_blank" style="text-decoration: none;">
+                        <button style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                            Print
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Back to Inspection Form</a>
+</body>
+</html>
