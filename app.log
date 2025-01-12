@@ -54,3 +54,56 @@
 2025-01-12 21:55:12,997 - __main__ - DEBUG - Attempting to render index.html
 2025-01-12 21:55:13,717 - __main__ - DEBUG - Found 1 records
 2025-01-12 21:55:14,662 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20/ht983445
+2025-01-12 22:00:28,185 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 22:00:28,185 - __main__ - INFO - Dropping existing tables
+2025-01-12 22:00:28,202 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 22:00:28,202 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 22:00:28,202 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 22:00:28,202 - __main__ - INFO - Running on Windows system
+2025-01-12 22:00:28,202 - __main__ - INFO - Checking system environment...
+2025-01-12 22:00:28,202 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 22:00:28,202 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 22:00:28,202 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 22:00:28,202 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 22:00:28,202 - __main__ - INFO - Database connection verified
+2025-01-12 22:00:28,202 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 22:00:28,202 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 22:00:53,290 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:00:54,744 - __main__ - DEBUG - Found 0 records
+2025-01-12 22:00:56,187 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:01:11,485 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-12 22:01:11,795 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:01:12,810 - __main__ - DEBUG - Found 1 records
+2025-01-12 22:01:13,814 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20/ht983445
+2025-01-12 22:21:40,955 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:22:05,264 - __main__ - INFO - Successfully created inspection record: MVR-HULL-001
+2025-01-12 22:22:05,271 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:22:06,820 - __main__ - DEBUG - Found 2 records
+2025-01-12 22:22:08,581 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2020.0mm%0AHeat%20No%3A%20ht546798
+2025-01-12 22:23:22,256 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2020.0mm%0AHeat%20No%3A%20ht546798
+2025-01-12 22:27:29,163 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:27:31,320 - __main__ - DEBUG - Found 2 records
+2025-01-12 22:27:32,830 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20/ht983445
+2025-01-12 22:28:10,472 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:28:34,732 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0022
+2025-01-12 22:28:35,040 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:28:36,496 - __main__ - DEBUG - Found 3 records
+2025-01-12 22:28:38,932 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2018.0mm%0AHeat%20No%3A%20ht675434
+2025-01-12 22:29:54,746 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:29:56,423 - __main__ - DEBUG - Found 3 records
+2025-01-12 22:29:57,428 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2018.0mm%0AHeat%20No%3A%20ht675434
+2025-01-12 22:30:16,906 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2020.0mm%0AHeat%20No%3A%20ht546798
+2025-01-12 22:31:00,727 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 22:31:00,727 - __main__ - INFO - Dropping existing tables
+2025-01-12 22:31:00,743 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 22:31:00,763 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 22:31:00,763 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 22:31:00,763 - __main__ - INFO - Running on Windows system
+2025-01-12 22:31:00,763 - __main__ - INFO - Checking system environment...
+2025-01-12 22:31:00,763 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 22:31:00,763 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 22:31:00,769 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 22:31:00,770 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 22:31:00,771 - __main__ - INFO - Database connection verified
+2025-01-12 22:31:00,772 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 22:31:00,773 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted

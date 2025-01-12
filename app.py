@@ -90,10 +90,12 @@ def print_record(report_number):
             
         # Generate QR code data
         qr_data = f"""Material Report
+Report No: {record.report_number}
 Type: {record.material_type}
 Grade: {record.material_grade}
 Thickness: {record.thickness}mm
-Heat No: {record.heat_number}"""
+Heat No: {record.heat_number}
+"""
         
         qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={quote(qr_data)}"
         logger.debug(f"Generated QR URL: {qr_url}")
