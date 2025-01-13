@@ -150,3 +150,16 @@
 2025-01-13 07:11:34,757 - __main__ - DEBUG - Found 0 records
 2025-01-13 07:11:36,036 - __main__ - DEBUG - Attempting to render index.html
 2025-01-13 07:11:51,607 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-13 18:05:40,303 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 18:05:55,231 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-13 18:05:55,237 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 18:05:59,395 - __main__ - DEBUG - Found 1 records
+2025-01-13 18:06:02,285 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2012%0A
+2025-01-13 18:08:32,621 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 18:08:35,114 - __main__ - DEBUG - Found 1 records
+2025-01-13 18:08:46,538 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 18:08:59,332 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0023
+2025-01-13 18:08:59,640 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 18:09:00,384 - __main__ - DEBUG - Found 2 records
+2025-01-13 18:09:03,445 - __main__ - DEBUG - Found 2 records
+2025-01-13 18:09:04,914 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2012%0A
