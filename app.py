@@ -46,6 +46,7 @@ class MaterialInspection(db.Model):
     inspection_date = db.Column(db.Date, nullable=False)
     inspection_status = db.Column(db.String(20), nullable=False)
     heat_number = db.Column(db.String(50), nullable=False)
+    material_count = db.Column(db.Integer, nullable=False)
     mill_cert_attachment = db.Column(db.String(200))
 
 @app.route('/')
@@ -95,6 +96,7 @@ Type: {record.material_type}
 Grade: {record.material_grade}
 Thickness: {record.thickness}mm
 Heat No: {record.heat_number}
+Count: {record.material_count}
 """
         
         qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={quote(qr_data)}"
@@ -156,6 +158,7 @@ def submit_inspection():
                 inspection_date=datetime.strptime(request.form['inspectionDate'], '%Y-%m-%d').date(),
                 inspection_status=request.form['inspectionStatus'],
                 heat_number=request.form['heatNumber'],
+                material_count=int(request.form['materialCount']),
                 mill_cert_attachment=mill_cert_filename
             )
             

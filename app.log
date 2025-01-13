@@ -107,3 +107,46 @@
 2025-01-12 22:31:00,771 - __main__ - INFO - Database connection verified
 2025-01-12 22:31:00,772 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
 2025-01-12 22:31:00,773 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-12 22:39:05,277 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 22:39:05,277 - __main__ - INFO - Dropping existing tables
+2025-01-12 22:39:05,284 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 22:39:05,284 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 22:39:05,284 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 22:39:05,284 - __main__ - INFO - Running on Windows system
+2025-01-12 22:39:05,284 - __main__ - INFO - Checking system environment...
+2025-01-12 22:39:05,284 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 22:39:05,284 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 22:39:05,284 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 22:39:05,284 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 22:39:05,284 - __main__ - INFO - Database connection verified
+2025-01-12 22:39:16,194 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:39:17,603 - __main__ - DEBUG - Found 0 records
+2025-01-12 22:39:20,126 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:39:36,336 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-12 22:39:36,632 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 22:39:37,188 - __main__ - DEBUG - Found 1 records
+2025-01-12 22:39:38,370 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0A
+2025-01-12 23:03:29,533 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 23:29:34,270 - __main__ - INFO - Checking for database file at: D:\deepseek_project\material_inspection\data_collection\material_inspections.db
+2025-01-12 23:29:34,271 - __main__ - INFO - Dropping existing tables
+2025-01-12 23:29:34,278 - __main__ - INFO - Initializing database tables with current schema
+2025-01-12 23:29:34,281 - __main__ - INFO - Database tables initialized successfully
+2025-01-12 23:29:34,282 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-12 23:29:34,282 - __main__ - INFO - Running on Windows system
+2025-01-12 23:29:34,282 - __main__ - INFO - Checking system environment...
+2025-01-12 23:29:34,282 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-12 23:29:34,282 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-12 23:29:34,285 - __main__ - INFO - Flask version: 3.1.0
+2025-01-12 23:29:34,285 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-12 23:29:34,286 - __main__ - INFO - Database connection verified
+2025-01-12 23:29:39,653 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 23:29:42,090 - __main__ - DEBUG - Found 0 records
+2025-01-12 23:29:43,509 - __main__ - DEBUG - Attempting to render index.html
+2025-01-12 23:29:54,994 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-12 23:29:58,293 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-12 23:30:01,100 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-12 23:30:04,002 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-13 07:11:33,049 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 07:11:34,757 - __main__ - DEBUG - Found 0 records
+2025-01-13 07:11:36,036 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 07:11:51,607 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.

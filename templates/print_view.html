@@ -142,6 +142,7 @@
                     <th>Inspection Date</th>
                     <th>Status</th>
                     <th>Heat Number</th>
+                    <th>Material Count</th>
                     {% if record.mill_cert_attachment %}
                     <th>Mill Certificate</th>
                     {% endif %}
@@ -156,6 +157,7 @@
                     <td>{{ record.inspection_date.strftime('%Y-%m-%d') }}</td>
                     <td>{{ record.inspection_status }}</td>
                     <td>{{ record.heat_number }}</td>
+                    <td>{{ record.material_count }}</td>
                     {% if record.mill_cert_attachment %}
                     <td>Attached ({{ record.mill_cert_attachment }})</td>
                     {% endif %}
