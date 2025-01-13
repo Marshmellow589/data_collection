@@ -1,13 +1,26 @@
 import sys
 import flask
 import sqlalchemy
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from datetime import datetime
 import logging
 from sqlalchemy.sql import text
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key-here'  # Change this to a secure random key
+
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+# Add current_user to template context
+@app.context_processor
+def inject_user():
+    return dict(current_user=current_user)
 
 # Configure logging to both console and file
 logger = logging.getLogger(__name__)
@@ -36,6 +49,21 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB limit
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'doc', 'docx'}
 db = SQLAlchemy(app)
 
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), unique=True, nullable=False)
+    password_hash = db.Column(db.String(128), nullable=False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
 class MaterialInspection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     report_number = db.Column(db.String(50), nullable=False)
@@ -49,16 +77,48 @@ class MaterialInspection(db.Model):
     material_count = db.Column(db.Integer, nullable=False)
     mill_cert_attachment = db.Column(db.String(200))
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    try:
+        if request.method == 'POST':
+            username = request.form['username']
+            password = request.form['password']
+            user = User.query.filter_by(username=username).first()
+            
+            if user and user.check_password(password):
+                login_user(user)
+                return redirect(url_for('dashboard'))
+            flash('Invalid username or password')
+        return render_template('login.html')
+    except Exception as e:
+        logger.error(f"Login error: {str(e)}")
+        return f"Login error: {str(e)}", 500
+
 @app.route('/')
 def index():
+    if not current_user.is_authenticated:
+        return redirect(url_for('login'))
+    return redirect(url_for('dashboard'))
+
+@app.route('/dashboard')
+@login_required
+def dashboard():
     try:
-        logger.debug("Attempting to render index.html")
-        return render_template('index.html')
+        logger.debug("Attempting to render dashboard")
+        return render_template('index.html', current_user=current_user)
     except Exception as e:
-        logger.error(f"Error serving index page: {str(e)}")
-        return f"Error loading page: {str(e)}", 500
+        logger.error(f"Error serving dashboard page: {str(e)}")
+        flash('Error loading dashboard')
+        return redirect(url_for('login'))
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 @app.route('/records')
+@login_required
 def view_records():
     try:
         records = MaterialInspection.query.order_by(MaterialInspection.inspection_date.desc()).all()
@@ -79,19 +139,19 @@ def test_endpoint():
     return "Test endpoint working", 200
 
 from datetime import datetime
-
 from urllib.parse import quote
 
 @app.route('/print/<report_number>')
+@login_required
 def print_record(report_number):
     try:
         record = MaterialInspection.query.filter_by(report_number=report_number).first()
         if not record:
             return "Record not found", 404
             
-        # Generate QR code data
-        qr_data = f"""Material Report
-Report No: {record.report_number}
+        # Generate QR code data with report number as first line
+        qr_data = f"""Report No: {record.report_number}
+Material Report
 Type: {record.material_type}
 Grade: {record.material_grade}
 Thickness: {record.thickness}mm
@@ -129,6 +189,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/submit', methods=['POST'])
+@login_required
 def submit_inspection():
     try:
         # Create uploads directory if it doesn't exist
@@ -165,7 +226,7 @@ def submit_inspection():
             db.session.add(inspection)
             db.session.commit()
             logger.info(f"Successfully created inspection record: {inspection.report_number}")
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard'))
             
         except Exception as e:
             db.session.rollback()
@@ -176,36 +237,37 @@ def submit_inspection():
         logger.error(f"Submission error: {str(e)}")
         return f"Submission error: {str(e)}", 500
 
-# Initialize database
+# Initialize database and create default admin user
 with app.app_context():
     try:
         # Create database file if it doesn't exist
         db_file = 'material_inspections.db'
-        logger.info(f"Checking for database file at: {os.path.abspath(db_file)}")
-        
-        # Drop all tables if they exist
-        if os.path.exists(db_file):
-            logger.info("Dropping existing tables")
-            db.drop_all()
-            
-        # Create new database file
         if not os.path.exists(db_file):
-            logger.info("Database file not found, creating new one")
-            try:
-                open(db_file, 'w').close()
-                logger.info(f"Successfully created database file: {db_file}")
-            except Exception as create_error:
-                logger.error(f"Failed to create database file: {str(create_error)}")
-                raise
+            open(db_file, 'w').close()
+            logger.info(f"Created new database file: {db_file}")
             
-        # Create tables with current schema
-        logger.info("Initializing database tables with current schema")
-        try:
-            db.create_all()
-            logger.info("Database tables initialized successfully")
-        except Exception as table_error:
-            logger.error(f"Failed to create tables: {str(table_error)}")
-            raise
+        # Create tables
+        db.create_all()
+        logger.info("Database tables initialized successfully")
+        
+        # Create default admin user if it doesn't exist
+        if not User.query.filter_by(username='admin').first():
+            admin = User(username='admin')
+            admin.set_password('admin123')  # Change this to a secure password
+            db.session.add(admin)
+            db.session.commit()
+            logger.info("Created default admin user")
+            
+        # Verify admin user exists
+        admin_user = User.query.filter_by(username='admin').first()
+        if not admin_user:
+            logger.error("Failed to create admin user")
+            raise Exception("Admin user creation failed")
+            
+        logger.info("Database initialization completed successfully")
+    except Exception as e:
+        logger.error(f"Database initialization failed: {str(e)}")
+        raise
             
     except Exception as e:
         logger.error(f"Database initialization failed: {str(e)}")
@@ -275,7 +337,7 @@ if __name__ == '__main__':
         try:
             app.run(
                 host='0.0.0.0',
-                port=5002,
+                port=5003,
                 debug=True,
                 use_reloader=use_reloader
             )
