@@ -263,3 +263,861 @@
 2025-01-13 22:36:31,592 - __main__ - INFO - Database connection verified
 2025-01-13 22:36:31,593 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
 2025-01-13 22:36:31,595 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-13 22:36:36,781 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:36:37,954 - __main__ - DEBUG - Found 3 records
+2025-01-13 22:36:39,141 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 22:38:29,467 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:38:30,645 - __main__ - DEBUG - Found 3 records
+2025-01-13 22:38:31,733 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 22:40:40,929 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:40:42,182 - __main__ - DEBUG - Found 3 records
+2025-01-13 22:40:43,129 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 22:50:17,251 - __main__ - INFO - Database tables initialized successfully
+2025-01-13 22:50:17,256 - __main__ - INFO - Database initialization completed successfully
+2025-01-13 22:50:17,257 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-13 22:50:17,257 - __main__ - INFO - Running on Windows system
+2025-01-13 22:50:17,257 - __main__ - INFO - Checking system environment...
+2025-01-13 22:50:17,258 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-13 22:50:17,258 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-13 22:50:17,260 - __main__ - INFO - Flask version: 3.1.0
+2025-01-13 22:50:17,261 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-13 22:50:17,262 - __main__ - INFO - Database connection verified
+2025-01-13 22:50:17,262 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-13 22:50:17,263 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-13 22:50:24,451 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:50:26,231 - __main__ - DEBUG - Found 3 records
+2025-01-13 22:50:27,619 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 22:50:37,176 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:50:48,889 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:51:35,747 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-13 22:51:35,759 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:51:39,912 - __main__ - DEBUG - Found 4 records
+2025-01-13 22:51:45,791 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-13 22:53:13,998 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:58:42,911 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 22:58:55,151 - __main__ - DEBUG - Found 4 records
+2025-01-13 22:58:56,293 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 23:06:18,986 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:06:20,595 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:06:24,396 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-13 23:06:47,506 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:06:53,591 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:06:56,087 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 23:07:20,418 - __main__ - INFO - Database tables initialized successfully
+2025-01-13 23:07:20,418 - __main__ - INFO - Database initialization completed successfully
+2025-01-13 23:07:20,418 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-13 23:07:20,418 - __main__ - INFO - Running on Windows system
+2025-01-13 23:07:20,425 - __main__ - INFO - Checking system environment...
+2025-01-13 23:07:20,425 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-13 23:07:20,425 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-13 23:07:20,429 - __main__ - INFO - Flask version: 3.1.0
+2025-01-13 23:07:20,429 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-13 23:07:20,430 - __main__ - INFO - Database connection verified
+2025-01-13 23:07:20,430 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-13 23:07:20,430 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-13 23:07:25,335 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:07:27,189 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:07:30,975 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:07:32,641 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-13 23:13:55,023 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:14:06,660 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:14:08,312 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:14:09,454 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-13 23:14:16,464 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:21:50,205 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:21:52,741 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:21:54,360 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-13 23:22:05,257 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:26:26,465 - __main__ - INFO - Database tables initialized successfully
+2025-01-13 23:26:26,470 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) no such column: user.first_login
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password_hash AS user_password_hash, user.first_login AS user_first_login 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('admin', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-13 23:26:41,200 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:26:45,266 - __main__ - DEBUG - Found 4 records
+2025-01-13 23:26:46,481 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-001%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%2020%0A
+2025-01-13 23:27:24,333 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:27:36,436 - __main__ - DEBUG - Attempting to render index.html
+2025-01-13 23:45:23,128 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-13 23:45:23,128 - __main__ - ERROR - Database initialization failed: 'Engine' object has no attribute 'execute'
+2025-01-13 23:47:27,101 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-13 23:47:27,111 - __main__ - INFO - User table migration completed
+2025-01-13 23:47:27,111 - __main__ - INFO - Database tables initialized successfully
+2025-01-13 23:47:27,124 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) no such column: user.first_login
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password_hash AS user_password_hash, user.first_login AS user_first_login 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('admin', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 05:18:28,619 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-14 05:18:28,619 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) table user_temp already exists
+[SQL: 
+                    CREATE TABLE user_temp (
+                        id INTEGER NOT NULL, 
+                        username VARCHAR(50) NOT NULL, 
+                        password_hash VARCHAR(128) NOT NULL, 
+                        first_login BOOLEAN NOT NULL, 
+                        PRIMARY KEY (id), 
+                        UNIQUE (username)
+                    )
+                ]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 05:21:00,098 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-14 05:21:00,098 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) table user_temp already exists
+[SQL: 
+                    CREATE TABLE user_temp (
+                        id INTEGER NOT NULL, 
+                        username VARCHAR(50) NOT NULL, 
+                        password_hash VARCHAR(128) NOT NULL, 
+                        first_login BOOLEAN NOT NULL, 
+                        PRIMARY KEY (id), 
+                        UNIQUE (username)
+                    )
+                ]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 05:22:15,833 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 05:22:18,071 - __main__ - DEBUG - Found 4 records
+2025-01-14 05:22:19,617 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-14 05:22:59,214 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-14 05:22:59,214 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) table user_temp already exists
+[SQL: 
+                    CREATE TABLE user_temp (
+                        id INTEGER NOT NULL, 
+                        username VARCHAR(50) NOT NULL, 
+                        password_hash VARCHAR(128) NOT NULL, 
+                        first_login BOOLEAN NOT NULL, 
+                        PRIMARY KEY (id), 
+                        UNIQUE (username)
+                    )
+                ]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 05:24:22,711 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-14 05:24:22,728 - __main__ - INFO - User table migration completed
+2025-01-14 05:24:22,728 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 05:24:22,728 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) no such column: user.first_login
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password_hash AS user_password_hash, user.first_login AS user_first_login 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('admin', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 07:12:50,558 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 07:12:52,597 - __main__ - DEBUG - Found 4 records
+2025-01-14 07:12:54,090 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-14 07:12:59,916 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 07:13:10,199 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:08:23,615 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:08:39,544 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-14 18:08:39,550 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:08:43,323 - __main__ - DEBUG - Found 5 records
+2025-01-14 18:08:44,718 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-14 18:11:16,989 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:11:44,479 - __main__ - INFO - Migrating User table to add first_login column
+2025-01-14 18:11:44,504 - __main__ - INFO - User table migration completed
+2025-01-14 18:11:44,508 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 18:11:44,514 - __main__ - ERROR - Database initialization failed: (sqlite3.OperationalError) no such column: user.first_login
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password_hash AS user_password_hash, user.first_login AS user_first_login 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('admin', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-14 18:13:09,508 - __main__ - INFO - Adding first_login column to User table
+2025-01-14 18:13:09,509 - __main__ - INFO - Successfully added first_login column
+2025-01-14 18:13:09,524 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 18:13:09,526 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 18:13:09,526 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 18:13:09,526 - __main__ - INFO - Running on Windows system
+2025-01-14 18:13:09,526 - __main__ - INFO - Checking system environment...
+2025-01-14 18:13:09,526 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 18:13:09,526 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 18:13:09,542 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 18:13:09,542 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 18:13:09,543 - __main__ - INFO - Database connection verified
+2025-01-14 18:13:09,544 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:13:09,545 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:13:26,742 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 18:13:26,742 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 18:13:26,742 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 18:13:26,742 - __main__ - INFO - Running on Windows system
+2025-01-14 18:13:26,742 - __main__ - INFO - Checking system environment...
+2025-01-14 18:13:26,742 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 18:13:26,757 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 18:13:26,757 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 18:13:26,757 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 18:13:26,757 - __main__ - INFO - Database connection verified
+2025-01-14 18:13:26,757 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:13:26,757 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:13:42,134 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:14:11,299 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0026
+2025-01-14 18:14:11,306 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:14:11,728 - __main__ - DEBUG - Found 6 records
+2025-01-14 18:14:16,335 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0026%0AType%3A%20pipe%0AGrade%3A%20GR%20B%0AThickness%3A%205.0mm%0AHeat%20No%3A%20ht456733434%0ACount%3A%205%0A
+2025-01-14 18:14:23,659 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:14:25,462 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:15:08,161 - __main__ - DEBUG - Found 6 records
+2025-01-14 18:18:50,126 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:19:06,680 - __main__ - DEBUG - Found 6 records
+2025-01-14 18:19:08,271 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Material%20Report%0AReport%20No%3A%20MVR-HULL-0024%0AType%3A%20steel%20plate%0AGrade%3A%20GR%20A%0AThickness%3A%2012.0mm%0AHeat%20No%3A%20ht4567334%0ACount%3A%204%0A
+2025-01-14 18:19:17,943 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:19:27,357 - __main__ - DEBUG - Found 6 records
+2025-01-14 18:21:05,537 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:21:11,314 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:22:27,620 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:22:30,611 - __main__ - DEBUG - Attempting to render index.html
+2025-01-14 18:22:40,683 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 18:22:40,683 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 18:22:40,683 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 18:22:40,683 - __main__ - INFO - Running on Windows system
+2025-01-14 18:22:40,683 - __main__ - INFO - Checking system environment...
+2025-01-14 18:22:40,698 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 18:22:40,698 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 18:22:40,698 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 18:22:40,698 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 18:22:40,698 - __main__ - INFO - Database connection verified
+2025-01-14 18:22:40,698 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:22:40,698 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 18:23:03,329 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 18:23:03,335 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 18:23:03,336 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 18:23:03,336 - __main__ - INFO - Running on Windows system
+2025-01-14 18:23:03,336 - __main__ - INFO - Checking system environment...
+2025-01-14 18:23:03,336 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 18:23:03,336 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 18:23:03,338 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 18:23:03,339 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 18:23:03,339 - __main__ - INFO - Database connection verified
+2025-01-14 18:25:37,192 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:26:09,025 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:26:13,852 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:26:14,165 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:26:16,014 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:26:16,025 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:26:30,321 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:27:50,721 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:32:01,219 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:32:03,733 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:32:24,696 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:34:01,768 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:34:04,775 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:35:13,816 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:35:16,200 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:35:32,639 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:36:17,858 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:38:50,195 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:23,307 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:33,941 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:39,647 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:41,255 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:41:41,567 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:42,763 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:43,448 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 18:41:43,453 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:44,500 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:47,818 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:41:50,484 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:04,578 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:33,057 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:35,432 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:42:35,748 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:36,911 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:42:36,922 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:42,985 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:45,909 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:42:57,648 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:44:36,709 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:44:51,857 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:44:57,269 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:44:57,581 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:45:03,641 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:45:05,566 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:48:46,571 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:51:49,865 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:51:57,858 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:53:50,164 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:53:54,428 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:53:57,169 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:53:58,048 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:53:58,351 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:53:59,488 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:00,150 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 18:54:00,154 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:01,138 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:01,527 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 18:54:01,532 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:38,638 - __main__ - INFO - Successfully created inspection record: MVR-HULL-001
+2025-01-14 18:54:38,645 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:42,454 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:49,522 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:52,111 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 18:54:52,115 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:54:56,675 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:19,598 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:20,529 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:56:20,838 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:22,028 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:56:22,037 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:53,844 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:54,793 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:56:54,800 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:56,241 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:56:56,251 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:56:59,895 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:00,432 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:00,735 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:03,815 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:05,280 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:05,581 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:06,471 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:06,481 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:07,312 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 18:57:07,617 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:08,087 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:08,095 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:09,030 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:09,333 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:10,085 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:10,093 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:12,377 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:57:13,210 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:57:13,514 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:39,092 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:40,773 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:42,489 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 18:59:42,795 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:47,464 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:48,272 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:59:48,579 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:49,491 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:50,063 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:59:50,069 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:51,953 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 18:59:51,962 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:53,341 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:59:53,648 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:54,498 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 18:59:54,507 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:55,150 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 18:59:55,480 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 18:59:56,014 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 18:59:56,021 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:00:24,176 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:00:24,929 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:00:25,245 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:00:28,263 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:00:28,272 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:00:32,352 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:00:32,663 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:01:36,636 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:01:37,788 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:01:38,108 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:01:39,508 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:01:39,508 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:01:42,497 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:01:44,005 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:31,071 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:32,628 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:04:32,936 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:34,624 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:04:34,624 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:35,569 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:04:35,881 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:54,230 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:04:54,414 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:04:55,248 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:04:55,560 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:31,662 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:32,603 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:06:32,922 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:52,350 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:53,240 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:06:53,548 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:57,200 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 19:06:57,206 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:58,958 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 19:06:58,969 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:06:59,393 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 19:06:59,706 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:07:00,788 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:07:00,798 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:09:59,809 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:09:59,824 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:09:59,824 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:09:59,824 - __main__ - INFO - Running on Windows system
+2025-01-14 19:09:59,824 - __main__ - INFO - Checking system environment...
+2025-01-14 19:09:59,824 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:09:59,824 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:09:59,824 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:09:59,824 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:09:59,824 - __main__ - INFO - Database connection verified
+2025-01-14 19:10:15,041 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:10:18,962 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:10:18,968 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:10:21,729 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:10:24,927 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:10:25,680 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:10:25,986 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:11,516 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:12,407 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:12,716 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:13,990 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:14,003 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:14,641 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:14,951 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:17,245 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:17,796 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 19:13:18,103 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:19,321 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:19,328 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:21,061 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 19:13:21,366 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:22,190 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 19:13:22,197 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:22,564 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:22,865 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:26,451 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:26,460 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:13:28,338 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:13:28,652 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:20:22,746 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:20:23,686 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:20:23,993 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:20:25,008 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:20:25,008 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:04,554 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:05,940 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:25:05,950 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:07,336 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:25:07,640 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:10,399 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:11,167 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 19:25:11,483 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:12,406 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:25:12,418 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:13,192 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 19:25:13,505 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:16,918 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:18,352 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:25:18,664 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:22,900 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:25:22,910 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:25:24,450 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:28:51,584 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:28:52,723 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:28:52,733 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:28:53,439 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:28:53,750 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:34:03,583 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:34:04,589 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:34:04,910 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:34:12,472 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:34:12,482 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:34:13,881 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:34:13,896 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:36:56,418 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:36:57,221 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:36:57,527 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:36:58,577 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:36:58,585 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:36:59,903 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:20,263 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:21,514 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:21,525 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:22,207 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:22,525 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:25,674 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:25,682 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:26,240 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:26,543 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:27,592 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:27,600 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:32,865 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 19:37:33,176 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:43,126 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:37:45,319 - __main__ - ERROR - Error loading material inspection: index.html
+2025-01-14 19:37:45,622 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:40:31,898 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:40:31,904 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:40:31,905 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:40:31,905 - __main__ - INFO - Running on Windows system
+2025-01-14 19:40:31,905 - __main__ - INFO - Checking system environment...
+2025-01-14 19:40:31,905 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:40:31,905 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:40:31,917 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:40:31,917 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:40:31,919 - __main__ - INFO - Database connection verified
+2025-01-14 19:40:39,138 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:40:43,145 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:40:50,837 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:41:02,142 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:43:59,963 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:44:30,519 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:44:30,534 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:44:30,534 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:44:30,534 - __main__ - INFO - Running on Windows system
+2025-01-14 19:44:30,534 - __main__ - INFO - Checking system environment...
+2025-01-14 19:44:30,534 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:44:30,534 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:44:30,534 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:44:30,534 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:44:30,534 - __main__ - INFO - Database connection verified
+2025-01-14 19:44:53,261 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:44:56,925 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0A%E2%95%94%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%97%0A%E2%95%91%20%20%20%20%20%20%20%20%20%20MATERIAL%20INSPECTION%20REPORT%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%A0%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%A3%0A%E2%95%91%20%20REPORT%20NUMBER%3A%20MVR-HULL-0024%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%A0%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%A3%0A%E2%95%91%20%20INSPECTION%20DATE%3A%202025-01-18%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%A0%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%A3%0A%E2%95%91%20%20MATERIAL%20TYPE%3A%20steel%20plate%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%91%20%20GRADE%3A%20GR%20A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%91%20%20THICKNESS%3A%2012.0%20mm%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%91%20%20HEAT%20NO%3A%20ht4567334%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%91%20%20COUNT%3A%204%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%91%20%20STATUS%3A%20Approved%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%E2%95%91%0A%E2%95%9A%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%9D%0A%0AREPORT%20NUMBER%3A%20MVR-HULL-0024%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%204%0ASTATUS%3A%20Approved%0A
+2025-01-14 19:45:21,969 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:45:23,638 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:45:24,253 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:47:13,119 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:48:16,635 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:49:30,476 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:49:37,378 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:49:39,335 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:49:42,528 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:53:02,452 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:53:02,452 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:53:02,452 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:53:02,452 - __main__ - INFO - Running on Windows system
+2025-01-14 19:53:02,452 - __main__ - INFO - Checking system environment...
+2025-01-14 19:53:02,452 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:53:02,452 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:53:02,452 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:53:02,452 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:53:02,452 - __main__ - INFO - Database connection verified
+2025-01-14 19:53:17,383 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:53:17,399 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:55:57,173 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:55:57,176 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:03,071 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:56:03,072 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:21,218 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:56:21,218 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:56:21,218 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:56:21,218 - __main__ - INFO - Running on Windows system
+2025-01-14 19:56:21,218 - __main__ - INFO - Checking system environment...
+2025-01-14 19:56:21,218 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:56:21,218 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:56:21,218 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:56:21,218 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:56:21,218 - __main__ - INFO - Database connection verified
+2025-01-14 19:56:32,727 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:34,602 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:34,612 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:36,049 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:36,357 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:37,383 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:37,389 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:39,271 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:40,157 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 19:56:40,470 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:41,652 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:42,542 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:42,549 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:43,605 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 19:56:43,613 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:43,936 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 19:56:44,241 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:44,759 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:44,769 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:47,504 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:47,808 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:51,337 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:51,345 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:56:54,183 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:56:54,491 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 19:59:02,733 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:59:02,750 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:59:02,750 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:59:02,750 - __main__ - INFO - Running on Windows system
+2025-01-14 19:59:02,750 - __main__ - INFO - Checking system environment...
+2025-01-14 19:59:02,750 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:59:02,750 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:59:02,750 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:59:02,750 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:59:02,750 - __main__ - INFO - Database connection verified
+2025-01-14 19:59:02,750 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 19:59:02,750 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 19:59:39,412 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 19:59:39,417 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 19:59:39,418 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 19:59:39,418 - __main__ - INFO - Running on Windows system
+2025-01-14 19:59:39,418 - __main__ - INFO - Checking system environment...
+2025-01-14 19:59:39,418 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 19:59:39,418 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 19:59:39,422 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 19:59:39,423 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 19:59:39,423 - __main__ - INFO - Database connection verified
+2025-01-14 19:59:44,603 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:59:44,612 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:59:46,658 - __main__ - DEBUG - Found 7 records
+2025-01-14 19:59:46,658 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:59:51,659 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 19:59:51,972 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:02:52,817 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:02:54,192 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:02:54,202 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:02:55,088 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:02:55,400 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:02:57,807 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:02:58,460 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 20:02:58,763 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:00,264 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:03:00,273 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:00,771 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 20:03:01,082 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:01,718 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 20:03:01,724 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:01,996 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:03:02,299 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:12,912 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:03:12,922 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:14,535 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:03:14,851 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:03:17,680 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:03:17,687 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:04:58,807 - __main__ - DEBUG - Found 7 records
+2025-01-14 20:04:58,809 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:01,534 - __main__ - DEBUG - Found 7 records
+2025-01-14 20:05:01,534 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:05,738 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:06,051 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:27,716 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:29,016 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:29,024 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:29,872 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:30,181 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:31,134 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:31,144 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:33,496 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:34,155 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 20:05:34,460 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:35,515 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:35,914 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 20:05:35,919 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:36,878 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:37,184 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 20:05:37,189 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:38,115 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:38,433 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:38,442 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:41,751 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:41,760 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:05:42,416 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:05:42,717 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:07:45,313 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:07:46,367 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:07:46,375 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:07:47,096 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:07:47,411 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:03,542 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:08:03,548 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:08:03,548 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:08:03,548 - __main__ - INFO - Running on Windows system
+2025-01-14 20:08:03,548 - __main__ - INFO - Checking system environment...
+2025-01-14 20:08:03,548 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:08:03,548 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:08:03,550 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:08:03,550 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:08:03,551 - __main__ - INFO - Database connection verified
+2025-01-14 20:08:14,716 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:15,910 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:15,921 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:16,576 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:16,880 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:17,646 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:17,655 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:20,130 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:23,040 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:23,685 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 20:08:23,992 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:25,510 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:25,951 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 20:08:25,960 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:27,237 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 20:08:27,246 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:27,600 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:27,912 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:28,969 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:28,977 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:29,274 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:29,578 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:08:34,755 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:08:34,763 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:12:37,070 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:12:37,070 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:12:37,070 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:12:37,070 - __main__ - INFO - Running on Windows system
+2025-01-14 20:12:37,070 - __main__ - INFO - Checking system environment...
+2025-01-14 20:12:37,070 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:12:37,070 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:12:37,070 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:12:37,070 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:12:37,070 - __main__ - INFO - Database connection verified
+2025-01-14 20:12:50,608 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:12:51,782 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:12:51,789 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:12:54,469 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 20:12:54,775 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:12:56,041 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:12:56,050 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:00,970 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:13:01,277 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:02,173 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:13:02,181 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:03,285 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:04,648 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:13:04,956 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:05,707 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 20:13:05,716 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:05,974 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:13:06,223 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:06,821 - __main__ - ERROR - Error loading master joint list: master_joint_list.html
+2025-01-14 20:13:06,831 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:13:07,079 - __main__ - ERROR - Error loading NDT update: ndt_update.html
+2025-01-14 20:13:07,370 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:17:56,450 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:17:56,454 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:17:56,455 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:17:56,455 - __main__ - INFO - Running on Windows system
+2025-01-14 20:17:56,455 - __main__ - INFO - Checking system environment...
+2025-01-14 20:17:56,455 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:17:56,455 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:17:56,458 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:17:56,458 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:17:56,458 - __main__ - INFO - Database connection verified
+2025-01-14 20:18:01,595 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:01,679 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:02,536 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:02,851 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:04,180 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:04,180 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:06,698 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:16,144 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:16,936 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:17,249 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:18,166 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:18,177 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:18,488 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:18,806 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:18:19,419 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:18:19,428 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:19:07,095 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:19:07,401 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:19:08,105 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:19:08,131 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:19:09,685 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:19:09,998 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:19:11,823 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:19:12,504 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:19:12,819 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:19,079 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:19,201 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:20,210 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:20,525 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:21,822 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:21,829 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:26,775 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:51,945 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:53,230 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:53,240 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:54,279 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:54,588 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:20:55,476 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:20:55,481 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:21:29,617 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:21:30,867 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:21:30,882 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:21:31,488 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:21:31,798 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:21:39,031 - __main__ - ERROR - Error loading final inspection: final_inspection.html
+2025-01-14 20:21:39,049 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:52,178 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:53,532 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:53,544 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:54,296 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:54,614 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:55,266 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:55,273 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:55,847 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:56,162 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:57,149 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:57,157 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:22:57,871 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:22:58,214 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:25:40,764 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:25:40,769 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:25:40,769 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:25:40,769 - __main__ - INFO - Running on Windows system
+2025-01-14 20:25:40,770 - __main__ - INFO - Checking system environment...
+2025-01-14 20:25:40,770 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:25:40,770 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:25:40,774 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:25:40,774 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:25:40,775 - __main__ - INFO - Database connection verified
+2025-01-14 20:25:47,240 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:25:47,349 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:25:48,221 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:25:48,523 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:25:49,374 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:25:49,542 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:25:50,072 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:25:50,374 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:25:54,177 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:26:01,106 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:26:53,171 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:26:53,171 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:26:53,171 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:26:53,171 - __main__ - INFO - Running on Windows system
+2025-01-14 20:26:53,171 - __main__ - INFO - Checking system environment...
+2025-01-14 20:26:53,171 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:26:53,171 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:26:53,171 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:26:53,171 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:26:53,171 - __main__ - INFO - Database connection verified
+2025-01-14 20:26:53,171 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 20:26:53,171 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 20:35:18,267 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 20:35:18,283 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 20:35:18,283 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 20:35:18,283 - __main__ - INFO - Running on Windows system
+2025-01-14 20:35:18,283 - __main__ - INFO - Checking system environment...
+2025-01-14 20:35:18,289 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 20:35:18,289 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 20:35:18,292 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 20:35:18,292 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 20:35:18,295 - __main__ - INFO - Database connection verified
+2025-01-14 20:35:40,683 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:35:44,675 - __main__ - DEBUG - Found 7 records
+2025-01-14 20:35:44,684 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:36:12,457 - __main__ - INFO - Successfully created inspection record: MVR-HULL-0024
+2025-01-14 20:36:12,733 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:36:20,632 - __main__ - DEBUG - Found 8 records
+2025-01-14 20:36:20,633 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:38:22,030 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:23,139 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:23,216 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:24,218 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:24,528 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:25,365 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:25,513 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:26,129 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:26,432 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:27,178 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:27,328 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:55,014 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:55,324 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:38:56,086 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:38:56,247 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:39:08,960 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:39:08,966 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:39:09,875 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'material_records'. Did you mean 'material_inspection' instead?
+2025-01-14 20:39:10,019 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:39:10,940 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:39:32,618 - __main__ - DEBUG - Found 8 records
+2025-01-14 20:39:32,619 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'records'. Did you mean 'view_records' instead?
+2025-01-14 20:42:02,606 - __main__ - DEBUG - Found 8 records
+2025-01-14 20:42:28,352 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0024%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%204%0ASTATUS%3A%20Approved%0A
+2025-01-14 20:43:33,198 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-001%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-16%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%2020%0ASTATUS%3A%20Approved%0A
+2025-01-14 20:43:51,098 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0026%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20pipe%0AGRADE%3A%20GR%20B%0ATHICKNESS%3A%205.0mm%0AHEAT%20NO%3A%20ht456733434%0ACOUNT%3A%205%0ASTATUS%3A%20Pending%0A

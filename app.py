@@ -19,8 +19,11 @@ login_manager.login_view = 'login'
 
 # Add current_user to template context
 @app.context_processor
-def inject_user():
-    return dict(current_user=current_user)
+def inject_context():
+        return dict(
+            current_user=current_user,
+            project_name="Sea Horse"  # Project name set to Sea Horse
+        )
 
 # Configure logging to both console and file
 logger = logging.getLogger(__name__)
@@ -53,6 +56,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
+    first_login = db.Column(db.Boolean, default=True, nullable=False)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -77,6 +81,17 @@ class MaterialInspection(db.Model):
     material_count = db.Column(db.Integer, nullable=False)
     mill_cert_attachment = db.Column(db.String(200))
 
+class FitUpUpdate(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    joint_number = db.Column(db.String(50), nullable=False)
+    fit_up_date = db.Column(db.Date, nullable=False)
+    fit_up_status = db.Column(db.String(20), nullable=False)
+    fit_up_type = db.Column(db.String(20), nullable=False)
+    remarks = db.Column(db.Text)
+    photos = db.Column(db.String(500))  # Comma-separated list of photo filenames
+    created_at = db.Column(db.DateTime, default=datetime.now)
+    updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     try:
@@ -98,18 +113,68 @@ def login():
 def index():
     if not current_user.is_authenticated:
         return redirect(url_for('login'))
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('view_records'))
 
 @app.route('/dashboard')
 @login_required
 def dashboard():
     try:
         logger.debug("Attempting to render dashboard")
-        return render_template('index.html', current_user=current_user)
+        return render_template('dashboard.html', current_user=current_user)
     except Exception as e:
         logger.error(f"Error serving dashboard page: {str(e)}")
         flash('Error loading dashboard')
         return redirect(url_for('login'))
+
+@app.route('/material-inspection')
+@login_required
+def material_inspection():
+    try:
+        return render_template('material_inspection.html', current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading material inspection: {str(e)}")
+        flash('Error loading material inspection')
+        return redirect(url_for('dashboard'))
+
+@app.route('/fit-up-update')
+@login_required
+def fit_up_update():
+    try:
+        return render_template('fit_up_update.html', current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading fit up update: {str(e)}")
+        flash('Error loading fit up update')
+        return redirect(url_for('dashboard'))
+
+@app.route('/final-inspection')
+@login_required
+def final_inspection():
+    try:
+        return render_template('final_inspection.html', current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading final inspection: {str(e)}")
+        flash('Error loading final inspection')
+        return redirect(url_for('dashboard'))
+
+@app.route('/master-joint-list')
+@login_required
+def master_joint_list():
+    try:
+        return render_template('master_joint_list.html', current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading master joint list: {str(e)}")
+        flash('Error loading master joint list')
+        return redirect(url_for('dashboard'))
+
+@app.route('/ndt-update')
+@login_required
+def ndt_update():
+    try:
+        return render_template('ndt_update.html', current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading NDT update: {str(e)}")
+        flash('Error loading NDT update')
+        return redirect(url_for('dashboard'))
 
 @app.route('/logout')
 @login_required
@@ -117,13 +182,45 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route('/records')
+@app.route('/change-password', methods=['GET', 'POST'])
+@login_required
+def change_password():
+    if not current_user.username == 'admin':
+        flash('Only admin can change passwords')
+        return redirect(url_for('dashboard'))
+        
+    if request.method == 'POST':
+        current_password = request.form['current_password']
+        new_password = request.form['new_password']
+        confirm_password = request.form['confirm_password']
+        
+        if not current_user.check_password(current_password):
+            flash('Current password is incorrect')
+            return redirect(url_for('change_password'))
+            
+        if new_password != confirm_password:
+            flash('New passwords do not match')
+            return redirect(url_for('change_password'))
+            
+        current_user.set_password(new_password)
+        db.session.commit()
+        flash('Password changed successfully')
+        return redirect(url_for('dashboard'))
+        
+    return render_template('change_password.html')
+
+@app.route('/material_inspection/material_records')
 @login_required
 def view_records():
     try:
+        # Check if request came from material_inspection page
+        if not request.referrer or 'material-inspection' not in request.referrer:
+            flash('Records can only be accessed from Material Inspection page')
+            return redirect(url_for('material_inspection'))
+            
         records = MaterialInspection.query.order_by(MaterialInspection.inspection_date.desc()).all()
         logger.debug(f"Found {len(records)} records")
-        return render_template('records.html', records=records)
+        return render_template('material_records.html', records=records)
     except Exception as e:
         logger.error(f"Error loading records: {str(e)}")
         return f"Error loading records: {str(e)}", 500
@@ -149,14 +246,19 @@ def print_record(report_number):
         if not record:
             return "Record not found", 404
             
-        # Generate QR code data with report number as first line
-        qr_data = f"""Report No: {record.report_number}
-Material Report
-Type: {record.material_type}
-Grade: {record.material_grade}
-Thickness: {record.thickness}mm
-Heat No: {record.heat_number}
-Count: {record.material_count}
+        # Generate QR code data with report number prominently displayed
+        qr_data = f"""
+MATERIAL INSPECTION REPORT
+==========================
+REPORT NUMBER: {record.report_number}
+--------------------------
+INSPECTION DATE: {record.inspection_date.strftime('%Y-%m-%d')}
+MATERIAL TYPE: {record.material_type}
+GRADE: {record.material_grade}
+THICKNESS: {record.thickness}mm
+HEAT NO: {record.heat_number}
+COUNT: {record.material_count}
+STATUS: {record.inspection_status}
 """
         
         qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={quote(qr_data)}"
@@ -246,7 +348,36 @@ with app.app_context():
             open(db_file, 'w').close()
             logger.info(f"Created new database file: {db_file}")
             
-        # Create tables
+        # Check if first_login column exists
+        inspector = db.inspect(db.engine)
+        try:
+            columns = inspector.get_columns('user')
+            has_first_login = any(col['name'] == 'first_login' for col in columns)
+            
+            if not has_first_login:
+                logger.info("Adding first_login column to User table")
+                
+                # Use ALTER TABLE to add column instead of table recreation
+                with db.engine.connect() as connection:
+                    # Add first_login column with default value
+                    connection.execute(text('''
+                        ALTER TABLE user
+                        ADD COLUMN first_login BOOLEAN NOT NULL DEFAULT 1
+                    '''))
+                    
+                    # Update existing rows to have first_login=True
+                    connection.execute(text('''
+                        UPDATE user
+                        SET first_login = 1
+                        WHERE first_login IS NULL
+                    '''))
+                    
+                logger.info("Successfully added first_login column")
+        except Exception as e:
+            logger.error(f"Error checking/adding first_login column: {str(e)}")
+            raise
+        
+        # Create tables (this will create any missing tables)
         db.create_all()
         logger.info("Database tables initialized successfully")
         
@@ -263,11 +394,8 @@ with app.app_context():
         if not admin_user:
             logger.error("Failed to create admin user")
             raise Exception("Admin user creation failed")
-            
+                
         logger.info("Database initialization completed successfully")
-    except Exception as e:
-        logger.error(f"Database initialization failed: {str(e)}")
-        raise
             
     except Exception as e:
         logger.error(f"Database initialization failed: {str(e)}")
@@ -337,7 +465,7 @@ if __name__ == '__main__':
         try:
             app.run(
                 host='0.0.0.0',
-                port=5003,
+                port=5002,
                 debug=True,
                 use_reloader=use_reloader
             )

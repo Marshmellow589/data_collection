@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Material Inspection System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .card {
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: white;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card:nth-child(1) {
+            background: #f8f9fa;
+            border: 2px solid #007bff;
+        }
+        .card:nth-child(1):hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 12px rgba(0,123,255,0.2);
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Material Inspection System</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown">
+                        {{ current_user.username }}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="{{ url_for('change_password') }}">Change Password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1 class="mb-4">Dashboard</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ url_for('material_inspection') }}" class="card text-center p-4 text-decoration-none">
+                    <div class="card-icon">📦</div>
+                    <h3>Material Inspection</h3>
+                    <p>Manage material inspection records</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-4" onclick="window.location='{{ url_for('fit_up_update') }}'">
+                    <div class="card-icon">🔧</div>
+                    <h3>Fit Up Update</h3>
+                    <p>Track fit up progress</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-4" onclick="window.location='{{ url_for('final_inspection') }}'">
+                    <div class="card-icon">✅</div>
+                    <h3>Final Inspection</h3>
+                    <p>Manage final inspection records</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-4" onclick="window.location='{{ url_for('master_joint_list') }}'">
+                    <div class="card-icon">📋</div>
+                    <h3>Master Joint List</h3>
+                    <p>View and manage joint records</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center p-4" onclick="window.location='{{ url_for('ndt_update') }}'">
+                    <div class="card-icon">🔍</div>
+                    <h3>NDT Update</h3>
+                    <p>Manage NDT inspection records</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

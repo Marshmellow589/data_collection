@@ -3,84 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Material Inspection Report for {{ record.report_number }}">
     <title>Inspection Report - {{ record.report_number }}</title>
     <style>
+        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 2cm;
+            color: #333;
+            line-height: 1.6;
         }
-        .report-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .report-header h1 {
-            font-size: 24px;
-            margin: 0;
-        }
-        .report-header h2 {
-            font-size: 18px;
-            margin: 0;
-            color: #666;
-        }
-        .report-details {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 2rem;
-        }
-        .report-details th,
-        .report-details td {
-            padding: 8px;
-            border: 1px solid #ddd;
-        }
-        .report-details th {
-            background-color: #f5f5f5;
-            text-align: left;
-            width: 30%;
-        }
-        .signature-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid #000;
-        }
-        @media print {
-            .no-print {
-                display: none;
-            }
-            .page-break {
-                page-break-before: always;
-            }
-        }
-    </style>
-</head>
-<body>
-    <style>
+
+        /* Layout */
         .header-container {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
             margin-bottom: 2rem;
         }
-        .project-info h1 {
-            font-size: 24px;
-            margin: 0;
-            font-weight: bold;
-        }
-        .report-info {
-            text-align: right;
-        }
-        .report-info div {
-            margin-bottom: 0.5rem;
-        }
+
         .material-data {
             margin: 2rem 0;
         }
+
+        .signature-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid #000;
+        }
+
+        .qr-code-section {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .main-title h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .report-info {
+            text-align: right;
+        }
+
+        .report-info div {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tables */
         .report-details {
             width: 100%;
             border-collapse: collapse;
-        }
-        .report-details {
             table-layout: fixed;
-            width: 100%;
         }
+
         .report-details th,
         .report-details td {
             padding: 12px;
@@ -89,12 +76,72 @@
             width: 12.5%;
             word-wrap: break-word;
         }
+
         .report-details th {
             background-color: #f5f5f5;
             font-weight: bold;
             padding: 15px;
         }
+
+        /* QR Code Section */
+        .qr-code-container {
+            width: 200px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background: white;
+            text-align: center;
+        }
+
+        .qr-header h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .qr-footer {
+            margin-top: 10px;
+        }
+
+        .qr-footer p {
+            margin: 5px 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 12px;
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .mb-1 {
+            margin-bottom: 0.5rem;
+        }
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
     </style>
+</head>
+<body>
 
     <div class="header-container">
         <div class="project-name">
@@ -109,27 +156,6 @@
         </div>
     </div>
 
-    <style>
-        .header-container {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        .project-name {
-            text-align: left;
-        }
-        .main-title {
-            text-align: center;
-        }
-        .main-title h1 {
-            font-weight: bold;
-            margin: 0;
-        }
-        .report-info {
-            text-align: right;
-        }
-    </style>
 
     <div class="material-data">
         <table class="report-details">
@@ -166,27 +192,6 @@
         </table>
     </div>
 
-    <style>
-        .signature-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 2px solid #000;
-        }
-        .signature-block {
-            width: 45%;
-        }
-        .signature-block.left {
-            text-align: left;
-        }
-        .signature-block.right {
-            text-align: right;
-        }
-        .signature-block p {
-            margin: 0.5rem 0;
-        }
-    </style>
 
     <div class="signature-container">
         <div class="signature-block left">
@@ -205,19 +210,23 @@
 
     <div class="qr-code-section">
         <div class="qr-code-container">
+            <div class="qr-header">
+                <p class="report-title">Material Inspection Report</p>
+                <div class="report-number-display">
+                    <p class="report-number-label">Report Number:</p>
+                    <p class="report-number-value">{{ record.report_number }}</p>
+                </div>
+            </div>
             <img src="{{ qr_url }}" 
                  alt="Material Report QR Code" 
                  style="width: 150px; height: 150px;"
                  onerror="this.onerror=null;this.src='https://via.placeholder.com/150?text=QR+Error';">
-            <div style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
-                <p style="font-size: 14px; margin: 0; font-weight: bold;">Scan to verify report</p>
-                <p style="font-size: 14px; margin: 0; font-weight: bold;">
-                    Report No: {{ record.report_number }}
-                </p>
+            <div class="qr-footer">
+                <p>Scan to verify report details</p>
+                {% if not qr_url %}
+                <p class="error">QR Code generation failed</p>
+                {% endif %}
             </div>
-            {% if not qr_url %}
-            <p style="color: red; font-size: 10px;">QR Code generation failed</p>
-            {% endif %}
         </div>
         <div class="footer-note">
             <p>This is an official inspection report. Any unauthorized modification is prohibited.</p>
@@ -225,29 +234,27 @@
         </div>
     </div>
 
-    <style>
-        .qr-code-section {
-            margin-top: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .qr-code-container {
-            width: 150px;
-            height: 150px;
-            border: 1px solid #ddd;
-            padding: 5px;
-            background: white;
-        }
-        .qr-code-container img {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+
 
     <div class="no-print" style="position: absolute; right: 2rem; top: 2rem; display: flex; gap: 1rem;">
-        <button onclick="window.print()" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Print Report</button>
-        <button onclick="window.close()" style="padding: 8px 16px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;">Close Window</button>
+        <button onclick="window.print()" class="print-button">Print Report</button>
+        <button onclick="window.close()" class="close-button">Close Window</button>
     </div>
+
+    <script>
+        // Add error handling for QR code
+        document.addEventListener('DOMContentLoaded', function() {
+            const qrImg = document.querySelector('.qr-code-container img');
+            if (qrImg) {
+                qrImg.onerror = function() {
+                    this.src = 'https://via.placeholder.com/150?text=QR+Error';
+                    const errorMsg = document.createElement('p');
+                    errorMsg.className = 'error';
+                    errorMsg.textContent = 'Failed to load QR code';
+                    qrImg.parentNode.appendChild(errorMsg);
+                };
+            }
+        });
+    </script>
 </body>
 </html>

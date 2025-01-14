@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Material Inspection</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .inspection-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Material Inspection System</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('material_inspection') }}">Material Inspection</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown">
+                        {{ current_user.username }}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="{{ url_for('change_password') }}">Change Password</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="inspection-container">
+        <h1 class="mb-4">Material Inspection</h1>
+        
+        <form method="POST" action="{{ url_for('submit_inspection') }}" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="reportNumber">Report Number</label>
+                <input type="text" class="form-control" id="reportNumber" name="reportNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="materialType">Material Type</label>
+                <input type="text" class="form-control" id="materialType" name="materialType" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="materialGrade">Material Grade</label>
+                <input type="text" class="form-control" id="materialGrade" name="materialGrade" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="thickness">Thickness (mm)</label>
+                <input type="number" step="0.01" class="form-control" id="thickness" name="thickness" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="size">Size</label>
+                <input type="text" class="form-control" id="size" name="size" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="inspectionDate">Inspection Date</label>
+                <input type="date" class="form-control" id="inspectionDate" name="inspectionDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="inspectionStatus">Inspection Status</label>
+                <select class="form-control" id="inspectionStatus" name="inspectionStatus" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="heatNumber">Heat Number</label>
+                <input type="text" class="form-control" id="heatNumber" name="heatNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="materialCount">Material Count</label>
+                <input type="number" class="form-control" id="materialCount" name="materialCount" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="millCert">Mill Certificate</label>
+                <input type="file" class="form-control" id="millCert" name="millCert">
+                <small class="form-text text-muted">Upload PDF, PNG, JPG, DOC, or DOCX file (max 16MB)</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit Inspection</button>
+            <a href="{{ url_for('view_records') }}" class="btn btn-outline-secondary ms-2">Review Records</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

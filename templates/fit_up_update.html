@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fit Up Update - Material Inspection System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Material Inspection System</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('fit_up_update') }}">Fit Up Update</a>
+                    </li>
+                </ul>
+                <span class="navbar-text me-3">Welcome, {{ current_user.username }}</span>
+                <a href="{{ url_for('logout') }}" class="btn btn-outline-light">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1 class="mb-4">Fit Up Update</h1>
+        <form method="POST" action="{{ url_for('fit_up_update') }}" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="jointNumber">Joint Number</label>
+                        <input type="text" class="form-control" id="jointNumber" name="jointNumber" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fitUpDate">Fit Up Date</label>
+                        <input type="date" class="form-control" id="fitUpDate" name="fitUpDate" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fitUpStatus">Fit Up Status</label>
+                        <select class="form-select" id="fitUpStatus" name="fitUpStatus" required>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="fitUpType">Fit Up Type</label>
+                        <select class="form-select" id="fitUpType" name="fitUpType" required>
+                            <option value="Butt Weld">Butt Weld</option>
+                            <option value="Socket Weld">Socket Weld</option>
+                            <option value="Flange">Flange</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Remarks</label>
+                <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="fitUpPhotos">Fit Up Photos</label>
+                <input type="file" class="form-control" id="fitUpPhotos" name="fitUpPhotos" multiple accept="image/*">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Fit Up Update</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
