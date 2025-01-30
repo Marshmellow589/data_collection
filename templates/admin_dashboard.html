@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Admin Dashboard</h1>
+    
+    <div class="row mt-4">
+        <!-- System Statistics -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">System Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Total Users: {{ total_users }}
+                        </li>
+                        <li class="list-group-item">
+                            Total Inspections: {{ total_inspections }}
+                        </li>
+                        <li class="list-group-item">
+                            Total Fit-Ups: {{ total_fitups }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Recent Activity</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Recent Inspections</h6>
+                            <ul class="list-group">
+                                {% for inspection in recent_inspections %}
+                                <li class="list-group-item">
+                                    {{ inspection.report_number }} - {{ inspection.inspection_date }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Recent Fit-Ups</h6>
+                            <ul class="list-group">
+                                {% for fitup in recent_fitups %}
+                                <li class="list-group-item">
+                                    {{ fitup.joint_number }} - {{ fitup.fit_up_date }}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Activity -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Recent Logins</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for login in recent_logins %}
+                        <li class="list-group-item">
+                            {{ login.username }} - {{ login.last_login.strftime('%Y-%m-%d %H:%M') }}
+                            <br>
+                            <small class="text-muted">IP: {{ login.last_login_ip }}</small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Failed Login Attempts</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for attempt in recent_failed_attempts %}
+                        <li class="list-group-item">
+                            {{ attempt.username }} - {{ attempt.timestamp.strftime('%Y-%m-%d %H:%M') }}
+                            <br>
+                            <small class="text-muted">IP: {{ attempt.ip_address }}</small>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -5,4 +5,69 @@ body {
     padding: 0;
 }
 
-/* Add any additional styles here */
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Specific column widths */
+.report-number {
+    width: 200px;  /* Increased width for Report # column */
+}
+
+/* Dashboard card styles */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Security activity specific styles */
+.security-activity .card {
+    min-height: 300px;
+}
+
+.security-activity .list-group-item {
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+.security-activity .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.security-activity .text-muted {
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .security-activity .card {
+        margin-bottom: 20px;
+    }
+    
+    .card-header h5 {
+        font-size: 1.1rem;
+    }
+}

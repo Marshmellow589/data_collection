@@ -1121,3 +1121,248 @@ WHERE user.username = ?
 2025-01-14 20:42:28,352 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0024%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%204%0ASTATUS%3A%20Approved%0A
 2025-01-14 20:43:33,198 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-001%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-16%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%2020%0ASTATUS%3A%20Approved%0A
 2025-01-14 20:43:51,098 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0026%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20pipe%0AGRADE%3A%20GR%20B%0ATHICKNESS%3A%205.0mm%0AHEAT%20NO%3A%20ht456733434%0ACOUNT%3A%205%0ASTATUS%3A%20Pending%0A
+2025-01-14 20:48:09,765 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0024%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-18%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%204%0ASTATUS%3A%20Approved%0A
+2025-01-14 20:49:21,969 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:49:25,579 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:52:56,837 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:54:55,161 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:56:43,835 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:57:11,490 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:57:12,242 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 20:58:29,978 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:00:34,836 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:04:09,283 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:05:30,699 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:05:38,229 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:07:04,308 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:07:22,500 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:07:34,574 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:07:45,340 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:09:53,214 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:09:55,303 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:09:58,285 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:10:00,508 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:12:00,332 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:16:02,162 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:16:02,180 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:16:04,060 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:16:04,061 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:16:07,437 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:16:07,438 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:16:08,779 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:16:08,780 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:16:14,921 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 21:16:14,921 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 21:16:14,921 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 21:16:14,921 - __main__ - INFO - Running on Windows system
+2025-01-14 21:16:14,921 - __main__ - INFO - Checking system environment...
+2025-01-14 21:16:14,921 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 21:16:14,932 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 21:16:14,932 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 21:16:14,932 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 21:16:14,932 - __main__ - INFO - Database connection verified
+2025-01-14 21:16:14,932 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 21:16:14,932 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 21:16:31,108 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:16:32,232 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'submit'. Did you mean 'submit_inspection' instead?
+2025-01-14 21:16:32,307 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:16:33,088 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'submit'. Did you mean 'submit_inspection' instead?
+2025-01-14 21:16:33,391 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:16:34,189 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'submit'. Did you mean 'submit_inspection' instead?
+2025-01-14 21:16:34,347 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:16:34,856 - __main__ - ERROR - Error loading material inspection: Could not build url for endpoint 'submit'. Did you mean 'submit_inspection' instead?
+2025-01-14 21:16:35,171 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:17:22,855 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:18:09,849 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:19:00,462 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:20:05,529 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:20:10,595 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:20:10,596 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:20:13,134 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:20:13,135 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:21:38,839 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:21:40,990 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:21:40,991 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:21:46,442 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:21:46,443 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:22:54,615 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:22:57,030 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:22:57,031 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:24:48,509 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:24:48,516 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:24:52,613 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:24:54,128 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:24:54,129 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:25:32,325 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 21:25:32,325 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 21:25:32,341 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 21:25:32,341 - __main__ - INFO - Running on Windows system
+2025-01-14 21:25:32,341 - __main__ - INFO - Checking system environment...
+2025-01-14 21:25:32,341 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 21:25:32,341 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 21:25:32,341 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 21:25:32,341 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 21:25:32,341 - __main__ - INFO - Database connection verified
+2025-01-14 21:25:32,341 - __main__ - ERROR - Port 5002 is already in use: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 21:25:32,341 - __main__ - ERROR - Failed to start application: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-01-14 21:26:38,756 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:26:51,786 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:29:47,000 - __main__ - ERROR - Database error: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-01-14 21:29:49,305 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:29:49,307 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:29:52,584 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:29:54,690 - __main__ - DEBUG - Found 8 records
+2025-01-14 21:29:54,692 - __main__ - ERROR - Error loading records: 'page' is undefined
+2025-01-14 21:30:16,983 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 21:30:16,983 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 21:30:16,983 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 21:30:16,983 - __main__ - INFO - Running on Windows system
+2025-01-14 21:30:16,983 - __main__ - INFO - Checking system environment...
+2025-01-14 21:30:16,983 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 21:30:16,983 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 21:30:16,983 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 21:30:16,983 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 21:30:16,983 - __main__ - INFO - Database connection verified
+2025-01-14 21:30:31,851 - __main__ - DEBUG - Found 8 records, showing page 1
+2025-01-14 21:30:41,792 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:30:43,560 - __main__ - DEBUG - Found 8 records, showing page 1
+2025-01-14 21:30:44,943 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:30:56,022 - __main__ - INFO - Successfully created inspection record: seahorse-pipe-mvr-009
+2025-01-14 21:30:56,310 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:31:04,095 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:31:15,693 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:31:16,919 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:31:17,544 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:31:42,692 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:32:02,440 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:33:35,054 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:33:42,652 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:33:51,891 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:35:49,587 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:35:51,209 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:36:07,000 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:36:25,552 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:36:31,894 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:39:20,499 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:39:24,080 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:52:02,126 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:53:07,086 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:53:10,167 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:53:22,225 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:54:44,930 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:54:47,642 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:56:44,945 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:56:46,913 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:56:58,680 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-001%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-16%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%2020%0ASTATUS%3A%20Approved%0A
+2025-01-14 21:57:35,752 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 21:57:37,778 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 21:58:20,203 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:00:31,242 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:00:33,337 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 22:09:01,305 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:09:02,987 - __main__ - DEBUG - Found 9 records, showing page 1
+2025-01-14 22:09:02,998 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'edit_record' with values ['report_number']. Did you mean 'print_record' instead?
+2025-01-14 22:09:15,857 - __main__ - INFO - Successfully created inspection record: Sea-horse -pipe-mvr-002
+2025-01-14 22:09:16,154 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:09:18,141 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:09:18,143 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'edit_record' with values ['report_number']. Did you mean 'print_record' instead?
+2025-01-14 22:09:19,867 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:09:19,869 - __main__ - ERROR - Error loading records: Could not build url for endpoint 'edit_record' with values ['report_number']. Did you mean 'print_record' instead?
+2025-01-14 22:09:35,065 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 22:09:35,065 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 22:09:35,065 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 22:09:35,065 - __main__ - INFO - Running on Windows system
+2025-01-14 22:09:35,065 - __main__ - INFO - Checking system environment...
+2025-01-14 22:09:35,065 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 22:09:35,065 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 22:09:35,065 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 22:09:35,081 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 22:09:35,081 - __main__ - INFO - Database connection verified
+2025-01-14 22:09:55,506 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:09:58,340 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:10:15,956 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:10:33,168 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:10:44,296 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:10:53,703 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:11:06,273 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:11:07,716 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:11:22,602 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:13:38,470 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:13:39,890 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:13:45,798 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:14:01,251 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:14:14,011 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:14:32,885 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:19:09,062 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:21:35,972 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:21:36,730 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:21:38,155 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:22:09,692 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 22:22:09,698 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 22:22:09,698 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 22:22:09,698 - __main__ - INFO - Running on Windows system
+2025-01-14 22:22:09,698 - __main__ - INFO - Checking system environment...
+2025-01-14 22:22:09,699 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 22:22:09,699 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 22:22:09,701 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 22:22:09,702 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 22:22:09,703 - __main__ - INFO - Database connection verified
+2025-01-14 22:22:18,157 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:22:28,959 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:22:44,210 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:24:47,624 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:25:02,090 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:25:13,049 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:25:35,544 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:28:56,803 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:28:58,809 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:29:09,701 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:29:26,817 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:29:57,849 - __main__ - INFO - Database tables initialized successfully
+2025-01-14 22:29:57,853 - __main__ - INFO - Database initialization completed successfully
+2025-01-14 22:29:57,854 - __main__ - INFO - Starting Flask application on port 5002
+2025-01-14 22:29:57,855 - __main__ - INFO - Running on Windows system
+2025-01-14 22:29:57,855 - __main__ - INFO - Checking system environment...
+2025-01-14 22:29:57,855 - __main__ - INFO - Python version: 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
+2025-01-14 22:29:57,855 - __main__ - INFO - Working directory: D:\deepseek_project\material_inspection\data_collection
+2025-01-14 22:29:57,857 - __main__ - INFO - Flask version: 3.1.0
+2025-01-14 22:29:57,857 - __main__ - INFO - SQLAlchemy version: 2.0.37
+2025-01-14 22:29:57,858 - __main__ - INFO - Database connection verified
+2025-01-14 22:30:05,937 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:31:26,980 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:37:38,831 - __main__ - DEBUG - Generated QR URL: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%0AMATERIAL%20INSPECTION%20REPORT%0A%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%3D%0AREPORT%20NUMBER%3A%20MVR-HULL-0024%0A--------------------------%0AINSPECTION%20DATE%3A%202025-01-22%0AMATERIAL%20TYPE%3A%20steel%20plate%0AGRADE%3A%20GR%20A%0ATHICKNESS%3A%2012.0mm%0AHEAT%20NO%3A%20ht4567334%0ACOUNT%3A%204%0ASTATUS%3A%20Approved%0A
+2025-01-14 22:38:08,528 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:38:08,557 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:38:11,300 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:38:11,301 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:40:15,655 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:40:15,657 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:40:23,355 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:40:23,356 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:40:25,517 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:40:25,518 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:41:26,355 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:41:28,604 - __main__ - DEBUG - Found 10 records, showing page 1
+2025-01-14 22:41:28,606 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:41:49,907 - __main__ - INFO - Successfully created inspection record: Sea-horse -pipe-mvr-003
+2025-01-14 22:41:50,205 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-14 22:41:52,295 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:41:52,297 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:43:05,510 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:43:05,510 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:43:06,886 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:43:06,887 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:43:09,776 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:43:09,777 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:43:12,036 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:43:12,037 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:44:08,880 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:44:08,895 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-14 22:44:10,307 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-14 22:44:10,308 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-15 06:15:11,348 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-15 06:15:16,311 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-15 06:15:16,313 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined
+2025-01-15 06:17:49,507 - __main__ - DEBUG - Attempting to render dashboard
+2025-01-15 06:17:53,558 - __main__ - DEBUG - Found 11 records, showing page 1
+2025-01-15 06:17:53,560 - __main__ - ERROR - Error loading records: 'csrf_token' is undefined

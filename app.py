@@ -1,16 +1,25 @@
-import sys
-import flask
-import sqlalchemy
-from flask import Flask, render_template, request, redirect, url_for, flash
+import os
+from datetime import datetime, timedelta
+from urllib.parse import quote
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-from datetime import datetime
-import logging
-from sqlalchemy.sql import text
 from werkzeug.security import generate_password_hash, check_password_hash
+import smtplib
+from email.mime.text import MIMEText
+import logging
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'  # Change this to a secure random key
+app.secret_key = os.environ.get('SECRET_KEY') or os.urandom(24)
+
+# Email configuration
+app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.environ.get('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.environ.get('MAIL_USE_TLS', 'true').lower() == 'true'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
 # Initialize Flask-Login
 login_manager = LoginManager()
@@ -20,10 +29,10 @@ login_manager.login_view = 'login'
 # Add current_user to template context
 @app.context_processor
 def inject_context():
-        return dict(
-            current_user=current_user,
-            project_name="Sea Horse"  # Project name set to Sea Horse
-        )
+    return dict(
+        current_user=current_user,
+        project_name="Sea Horse"
+    )
 
 # Configure logging to both console and file
 logger = logging.getLogger(__name__)
@@ -45,6 +54,7 @@ ch.setFormatter(formatter)
 # Add the handlers to the logger
 logger.addHandler(fh)
 logger.addHandler(ch)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///material_inspections.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -52,11 +62,20 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB limit
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'doc', 'docx'}
 db = SQLAlchemy(app)
 
+class FailedLoginAttempt(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.now, nullable=False)
+    ip_address = db.Column(db.String(45), nullable=False)
+
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
     first_login = db.Column(db.Boolean, default=True, nullable=False)
+    is_admin = db.Column(db.Boolean, default=False, nullable=False)
+    last_login = db.Column(db.DateTime)
+    last_login_ip = db.Column(db.String(45))
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -70,52 +89,310 @@ def load_user(user_id):
 
 class MaterialInspection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    report_number = db.Column(db.String(50), nullable=False)
+    report_number = db.Column(db.String(50), nullable=False, index=True)
     material_type = db.Column(db.String(100), nullable=False)
     material_grade = db.Column(db.String(50), nullable=False)
     thickness = db.Column(db.Float, nullable=False)
     size = db.Column(db.String(50), nullable=False)
-    inspection_date = db.Column(db.Date, nullable=False)
+    inspection_date = db.Column(db.Date, nullable=False, index=True)
     inspection_status = db.Column(db.String(20), nullable=False)
     heat_number = db.Column(db.String(50), nullable=False)
     material_count = db.Column(db.Integer, nullable=False)
     mill_cert_attachment = db.Column(db.String(200))
 
+    __table_args__ = (
+        db.Index('idx_material_type_grade', 'material_type', 'material_grade'),
+    )
+
 class FitUpUpdate(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     joint_number = db.Column(db.String(50), nullable=False)
+    drawing_no = db.Column(db.String(50), nullable=False)
+    part1_material = db.Column(db.String(50), nullable=False)
+    part1_grade = db.Column(db.String(50), nullable=False)
+    part1_thickness = db.Column(db.Float, nullable=False)
+    part2_material = db.Column(db.String(50), nullable=False)
+    part2_grade = db.Column(db.String(50), nullable=False)
+    part2_thickness = db.Column(db.Float, nullable=False)
     fit_up_date = db.Column(db.Date, nullable=False)
     fit_up_status = db.Column(db.String(20), nullable=False)
     fit_up_type = db.Column(db.String(20), nullable=False)
     remarks = db.Column(db.Text)
-    photos = db.Column(db.String(500))  # Comma-separated list of photo filenames
+    photos = db.Column(db.String(500))
     created_at = db.Column(db.DateTime, default=datetime.now)
     updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    try:
-        if request.method == 'POST':
-            username = request.form['username']
+    if request.method == 'POST':
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+        except Exception as e:
+            logger.error(f"Error getting request details: {str(e)}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred while processing your request',
+                'details': str(e),
+                'ip': 'unknown',
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+        try:
+            ip = request.remote_addr
+            user_agent = request.headers.get('User-Agent', '')
+            
+            if not request.form.get('username') or not request.form.get('password'):
+                flash('Username and password are required', 'error')
+                logger.warning(f'Login attempt with missing credentials from IP: {ip}')
+                return jsonify({
+                    'error': 'Missing credentials',
+                    'message': 'Username and password are required',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+            
+            if not user_agent or len(user_agent) > 512:
+                logger.warning(f'Suspicious user agent from IP: {ip}')
+                return jsonify({
+                    'error': 'Invalid request',
+                    'message': 'Suspicious user agent detected',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+            
+            username = request.form['username'].strip()
             password = request.form['password']
+            
+            if len(username) > 50 or len(password) > 128:
+                logger.warning(f'Invalid input length from IP: {ip}')
+                return jsonify({
+                    'error': 'Invalid input',
+                    'message': 'Username or password exceeds maximum length',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+                
+            if not username or not password:
+                logger.warning(f'Empty credentials from IP: {ip}')
+                return jsonify({
+                    'error': 'Invalid input',
+                    'message': 'Username and password cannot be empty',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+            
+            if any(char in username for char in [';', '--', '/*', '*/', "'", '"']):
+                logger.warning(f'Potential SQL injection attempt from {ip}')
+                return jsonify({
+                    'error': 'Invalid input',
+                    'message': 'Username contains invalid characters',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+            
+            failed_attempts = FailedLoginAttempt.query.filter_by(
+                username=username,
+                timestamp__gte=datetime.now() - timedelta(minutes=5)
+            ).count()
+            
+            if failed_attempts >= 5:
+                wait_time = min(2 ** (failed_attempts - 5), 300)
+                logger.warning(f'Rate limit exceeded for username: {username} from IP: {ip}')
+                return jsonify({
+                    'error': 'Too many attempts',
+                    'message': f'Please wait {wait_time} seconds before trying again',
+                    'retry_after': wait_time,
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 429
+            
             user = User.query.filter_by(username=username).first()
             
             if user and user.check_password(password):
+                FailedLoginAttempt.query.filter_by(username=username).delete()
+                user.last_login = datetime.now()
+                user.last_login_ip = ip
+                db.session.commit()
+                
+                session_token = generate_session_token(user.id)
+                
+                logger.info(f"Login successful for user: {user.username} from IP: {ip}")
                 login_user(user)
-                return redirect(url_for('dashboard'))
-            flash('Invalid username or password')
-        return render_template('login.html')
+                
+                try:
+                    with open('audit.log', 'a') as audit_log:
+                        audit_log.write(f"{datetime.now().isoformat()} - LOGIN - {user.username} from {ip}\n")
+                except Exception as e:
+                    logger.error(f"Error writing to audit log: {str(e)}")
+                
+                if user.is_admin:
+                    logger.info(f"Admin user {user.username} logged in")
+                    return jsonify({
+                        'message': 'Login successful',
+                        'user': user.username,
+                        'role': 'admin',
+                        'session_token': session_token,
+                        'redirect': url_for('admin_dashboard')
+                    }), 200
+                
+                if user.first_login:
+                    user.first_login = False
+                    db.session.commit()
+                    logger.info(f"First login for user: {user.username}")
+                    return jsonify({
+                        'message': 'First login detected',
+                        'user': user.username,
+                        'role': 'user',
+                        'session_token': session_token,
+                        'redirect': url_for('change_password')
+                    }), 200
+                
+                logger.info(f"Regular user {user.username} logged in")
+                return jsonify({
+                    'message': 'Login successful',
+                    'user': user.username,
+                    'role': 'user',
+                    'session_token': session_token,
+                    'redirect': url_for('dashboard')
+                }), 200
+            
+            logger.warning(f"Failed login attempt for username: {username} from IP: {ip}")
+            failed_attempt = FailedLoginAttempt(
+                username=username,
+                timestamp=datetime.now(),
+                ip_address=ip
+            )
+            db.session.add(failed_attempt)
+            db.session.commit()
+            
+            return jsonify({
+                'error': 'Invalid credentials',
+                'message': 'Invalid username or password',
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 401
+            
+        except Exception as e:
+            logger.error(f"Login error: {str(e)} from IP: {ip}")
+            return jsonify({
+                'error': 'Login error',
+                'message': 'An error occurred during login',
+                'details': str(e),
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 500
+            
+    return render_template('login.html')
+
+def generate_session_token(user_id):
+    try:
+        token = os.urandom(32).hex()
+        session_token = SessionToken(
+            user_id=user_id,
+            token=token,
+            expires_at=datetime.now() + timedelta(hours=1)
+        )
+        db.session.add(session_token)
+        db.session.commit()
+        return token
     except Exception as e:
-        logger.error(f"Login error: {str(e)}")
-        return f"Login error: {str(e)}", 500
+        logger.error(f"Error generating session token: {str(e)}")
+        raise
 
-@app.route('/')
-def index():
-    if not current_user.is_authenticated:
-        return redirect(url_for('login'))
-    return redirect(url_for('view_records'))
-
-@app.route('/dashboard')
+class SessionToken(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
 @login_required
 def dashboard():
     try:
@@ -126,7 +403,52 @@ def dashboard():
         flash('Error loading dashboard')
         return redirect(url_for('login'))
 
+@app.route('/admin/dashboard')
+@login_required
+def admin_dashboard():
+    if not current_user.is_admin:
+        flash('Unauthorized access')
+        return redirect(url_for('dashboard'))
+        
+    try:
+        total_users = User.query.count()
+        total_inspections = MaterialInspection.query.count()
+        total_fitups = FitUpUpdate.query.count()
+        
+        recent_inspections = MaterialInspection.query.order_by(
+            MaterialInspection.inspection_date.desc()
+        ).limit(5).all()
+        
+        recent_fitups = FitUpUpdate.query.order_by(
+            FitUpUpdate.fit_up_date.desc()
+        ).limit(5).all()
+        
+        recent_logins = User.query.filter(
+            User.last_login.isnot(None)
+        ).order_by(
+            User.last_login.desc()
+        ).limit(5).all()
+        
+        recent_failed_attempts = FailedLoginAttempt.query.order_by(
+            FailedLoginAttempt.timestamp.desc()
+        ).limit(5).all()
+        
+        return render_template('admin_dashboard.html',
+                            total_users=total_users,
+                            total_inspections=total_inspections,
+                            total_fitups=total_fitups,
+                            recent_inspections=recent_inspections,
+                            recent_fitups=recent_fitups,
+                            recent_logins=recent_logins,
+                            recent_failed_attempts=recent_failed_attempts,
+                            current_user=current_user)
+    except Exception as e:
+        logger.error(f"Error loading admin dashboard: {str(e)}")
+        flash('Error loading admin dashboard')
+        return redirect(url_for('dashboard'))
+
 @app.route('/material-inspection')
+@app.route('/material_inspection')
 @login_required
 def material_inspection():
     try:
@@ -146,340 +468,109 @@ def fit_up_update():
         flash('Error loading fit up update')
         return redirect(url_for('dashboard'))
 
-@app.route('/final-inspection')
+@app.route('/fit-up-update/submit', methods=['POST'])
 @login_required
-def final_inspection():
+def submit_fit_up_update():
     try:
-        return render_template('final_inspection.html', current_user=current_user)
-    except Exception as e:
-        logger.error(f"Error loading final inspection: {str(e)}")
-        flash('Error loading final inspection')
-        return redirect(url_for('dashboard'))
-
-@app.route('/master-joint-list')
-@login_required
-def master_joint_list():
-    try:
-        return render_template('master_joint_list.html', current_user=current_user)
-    except Exception as e:
-        logger.error(f"Error loading master joint list: {str(e)}")
-        flash('Error loading master joint list')
-        return redirect(url_for('dashboard'))
-
-@app.route('/ndt-update')
-@login_required
-def ndt_update():
-    try:
-        return render_template('ndt_update.html', current_user=current_user)
-    except Exception as e:
-        logger.error(f"Error loading NDT update: {str(e)}")
-        flash('Error loading NDT update')
-        return redirect(url_for('dashboard'))
-
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('login'))
-
-@app.route('/change-password', methods=['GET', 'POST'])
-@login_required
-def change_password():
-    if not current_user.username == 'admin':
-        flash('Only admin can change passwords')
-        return redirect(url_for('dashboard'))
+        ip = request.remote_addr
+        user_agent = request.headers.get('User-Agent', '')
         
-    if request.method == 'POST':
-        current_password = request.form['current_password']
-        new_password = request.form['new_password']
-        confirm_password = request.form['confirm_password']
+        if not user_agent or len(user_agent) > 512:
+            logger.warning(f'Suspicious user agent from IP: {ip}')
+            return jsonify({
+                'error': 'Invalid request',
+                'message': 'Suspicious user agent detected',
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 400
+
+        required_fields = [
+            'jointNumber', 'drawingNo', 'part1Material', 'part1Grade',
+            'part1Thickness', 'part2Material', 'part2Grade', 'part2Thickness',
+            'fitUpDate', 'fitUpStatus', 'fitUpType'
+        ]
         
-        if not current_user.check_password(current_password):
-            flash('Current password is incorrect')
-            return redirect(url_for('change_password'))
-            
-        if new_password != confirm_password:
-            flash('New passwords do not match')
-            return redirect(url_for('change_password'))
-            
-        current_user.set_password(new_password)
-        db.session.commit()
-        flash('Password changed successfully')
-        return redirect(url_for('dashboard'))
+        missing_fields = []
+        for field in required_fields:
+            if field not in request.form or not request.form[field].strip():
+                missing_fields.append(field)
         
-    return render_template('change_password.html')
+        if missing_fields:
+            logger.warning(f"Missing required fields: {missing_fields} from IP: {ip}")
+            return jsonify({
+                'error': 'Missing fields',
+                'message': 'All required fields must be provided',
+                'missing_fields': missing_fields,
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 400
 
-@app.route('/material_inspection/material_records')
-@login_required
-def view_records():
-    try:
-        # Check if request came from material_inspection page
-        if not request.referrer or 'material-inspection' not in request.referrer:
-            flash('Records can only be accessed from Material Inspection page')
-            return redirect(url_for('material_inspection'))
-            
-        records = MaterialInspection.query.order_by(MaterialInspection.inspection_date.desc()).all()
-        logger.debug(f"Found {len(records)} records")
-        return render_template('material_records.html', records=records)
-    except Exception as e:
-        logger.error(f"Error loading records: {str(e)}")
-        return f"Error loading records: {str(e)}", 500
-
-@app.route('/health')
-def health_check():
-    logger.info("Health check endpoint accessed")
-    return "OK", 200
-
-@app.route('/test')
-def test_endpoint():
-    logger.info("Test endpoint accessed")
-    return "Test endpoint working", 200
-
-from datetime import datetime
-from urllib.parse import quote
-
-@app.route('/print/<report_number>')
-@login_required
-def print_record(report_number):
-    try:
-        record = MaterialInspection.query.filter_by(report_number=report_number).first()
-        if not record:
-            return "Record not found", 404
-            
-        # Generate QR code data with report number prominently displayed
-        qr_data = f"""
-MATERIAL INSPECTION REPORT
-==========================
-REPORT NUMBER: {record.report_number}
---------------------------
-INSPECTION DATE: {record.inspection_date.strftime('%Y-%m-%d')}
-MATERIAL TYPE: {record.material_type}
-GRADE: {record.material_grade}
-THICKNESS: {record.thickness}mm
-HEAT NO: {record.heat_number}
-COUNT: {record.material_count}
-STATUS: {record.inspection_status}
-"""
-        
-        qr_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={quote(qr_data)}"
-        logger.debug(f"Generated QR URL: {qr_url}")
-        
-        # Test if QR service is reachable
-        try:
-            import requests
-            test_response = requests.get(qr_url, timeout=5)
-            if test_response.status_code != 200:
-                logger.error(f"QR service returned status {test_response.status_code}")
-                qr_url = None
-        except Exception as e:
-            logger.error(f"QR service connection failed: {str(e)}")
-            qr_url = None
-            
-        return render_template('print_view.html', 
-                             record=record,
-                             current_date=datetime.now(),
-                             qr_url=qr_url)
-    except Exception as e:
-        logger.error(f"Error loading print view: {str(e)}")
-        return f"Error loading print view: {str(e)}", 500
-
-import os
-from werkzeug.utils import secure_filename
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-@app.route('/submit', methods=['POST'])
-@login_required
-def submit_inspection():
-    try:
-        # Create uploads directory if it doesn't exist
-        if not os.path.exists(app.config['UPLOAD_FOLDER']):
-            os.makedirs(app.config['UPLOAD_FOLDER'])
-
-        mill_cert_filename = None
-        if 'millCert' in request.files:
-            file = request.files['millCert']
-            if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
-                file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-                try:
-                    file.save(file_path)
-                    mill_cert_filename = filename
-                except Exception as e:
-                    logger.error(f"Error saving file: {str(e)}")
-                    return f"Error saving file: {str(e)}", 500
+        joint_number = request.form['jointNumber'].strip()
+        if len(joint_number) > 50 or not joint_number:
+            logger.warning(f"Invalid joint number format: {joint_number} from IP: {ip}")
+            return jsonify({
+                'error': 'Invalid input',
+                'message': 'Joint number must be between 1-50 characters',
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 400
 
         try:
-            inspection = MaterialInspection(
-                report_number=request.form['reportNumber'],
-                material_type=request.form['materialType'],
-                material_grade=request.form['materialGrade'],
-                thickness=float(request.form['thickness']),
-                size=request.form['size'],
-                inspection_date=datetime.strptime(request.form['inspectionDate'], '%Y-%m-%d').date(),
-                inspection_status=request.form['inspectionStatus'],
-                heat_number=request.form['heatNumber'],
-                material_count=int(request.form['materialCount']),
-                mill_cert_attachment=mill_cert_filename
-            )
+            part1_thickness = float(request.form['part1Thickness'])
+            part2_thickness = float(request.form['part2Thickness'])
             
-            db.session.add(inspection)
-            db.session.commit()
-            logger.info(f"Successfully created inspection record: {inspection.report_number}")
-            return redirect(url_for('dashboard'))
-            
-        except Exception as e:
-            db.session.rollback()
-            logger.error(f"Database error: {str(e)}")
-            return f"Database error: {str(e)}", 500
-            
-    except Exception as e:
-        logger.error(f"Submission error: {str(e)}")
-        return f"Submission error: {str(e)}", 500
+            if part1_thickness <= 0 or part2_thickness <= 0:
+                logger.warning(f"Invalid thickness values from IP: {ip}")
+                return jsonify({
+                    'error': 'Invalid input',
+                    'message': 'Thickness values must be greater than 0',
+                    'ip': ip,
+                    'timestamp': datetime.now().isoformat()
+                }), 400
+        except ValueError:
+            logger.warning(f"Invalid numeric input from IP: {ip}")
+            return jsonify({
+                'error': 'Invalid input',
+                'message': 'Thickness values must be valid numbers',
+                'ip': ip,
+                'timestamp': datetime.now().isoformat()
+            }), 400
+        photo_filenames = []
+        if 'fitUpPhotos' in request.files:
+            files = request.files.getlist('fitUpPhotos')
+            for file in files:
+                if file:
+                    if file.content_length > app.config['MAX_CONTENT_LENGTH']:
+                        logger.warning(f"File size exceeds maximum allowed from IP: {ip}")
+                        return jsonify({
+                            'error': 'File too large',
+                            'message': f'File size exceeds {app.config["MAX_CONTENT_LENGTH"]} bytes',
+                            'ip': ip,
+                            'timestamp': datetime.now().isoformat()
+                        }), 413  # This line was causing the syntax error previously
 
-# Initialize database and create default admin user
-with app.app_context():
-    try:
-        # Create database file if it doesn't exist
-        db_file = 'material_inspections.db'
-        if not os.path.exists(db_file):
-            open(db_file, 'w').close()
-            logger.info(f"Created new database file: {db_file}")
-            
-        # Check if first_login column exists
-        inspector = db.inspect(db.engine)
-        try:
-            columns = inspector.get_columns('user')
-            has_first_login = any(col['name'] == 'first_login' for col in columns)
-            
-            if not has_first_login:
-                logger.info("Adding first_login column to User table")
-                
-                # Use ALTER TABLE to add column instead of table recreation
-                with db.engine.connect() as connection:
-                    # Add first_login column with default value
-                    connection.execute(text('''
-                        ALTER TABLE user
-                        ADD COLUMN first_login BOOLEAN NOT NULL DEFAULT 1
-                    '''))
-                    
-                    # Update existing rows to have first_login=True
-                    connection.execute(text('''
-                        UPDATE user
-                        SET first_login = 1
-                        WHERE first_login IS NULL
-                    '''))
-                    
-                logger.info("Successfully added first_login column")
-        except Exception as e:
-            logger.error(f"Error checking/adding first_login column: {str(e)}")
-            raise
-        
-        # Create tables (this will create any missing tables)
-        db.create_all()
-        logger.info("Database tables initialized successfully")
-        
-        # Create default admin user if it doesn't exist
-        if not User.query.filter_by(username='admin').first():
-            admin = User(username='admin')
-            admin.set_password('admin123')  # Change this to a secure password
-            db.session.add(admin)
-            db.session.commit()
-            logger.info("Created default admin user")
-            
-        # Verify admin user exists
-        admin_user = User.query.filter_by(username='admin').first()
-        if not admin_user:
-            logger.error("Failed to create admin user")
-            raise Exception("Admin user creation failed")
-                
-        logger.info("Database initialization completed successfully")
-            
+                    # Add proper file handling here
+                    if file and allowed_file(file.filename):
+                        filename = secure_filename(file.filename)
+                        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                        photo_filenames.append(filename)
+        # photo_filenames = []
+        # if 'fitUpPhotos' in request.files:
+        #     files = request.files.getlist('fitUpPhotos')
+        #     for file in files:
+        #         if file:
+        #             if file.content_length > app.config['MAX_CONTENT_LENGTH']:
+        #                 logger.warning(f"File size exceeds maximum allowed from IP: {ip}")
+        #                 return jsonify({
+        #                     'error': 'File too large',
+        #                     'message': f'File size exceeds {app.config["MAX_CONTENT_LENGTH"]} bytes',
+        #                     'ip': ip,
+        #                     'timestamp': datetime.now().isoformat()
+        #                 }), 413
     except Exception as e:
-        logger.error(f"Database initialization failed: {str(e)}")
-        raise
-
-if __name__ == '__main__':
-    try:
-        logger.info("Starting Flask application on port 5002")
-        
-        # Windows-specific configuration
-        if os.name == 'nt':
-            logger.info("Running on Windows system")
-            # Increase socket timeout for Windows
-            import socket
-            socket.setdefaulttimeout(300)
-            # Enable Windows-specific debug logging
-            app.debug = True
-            # Disable reloader to avoid port conflicts
-            use_reloader = False
-            
-            # Add detailed startup logging
-            logger.info("Checking system environment...")
-            logger.info(f"Python version: {sys.version}")
-            logger.info(f"Working directory: {os.getcwd()}")
-            logger.info(f"Flask version: {flask.__version__}")
-            logger.info(f"SQLAlchemy version: {sqlalchemy.__version__}")
-            
-        else:
-            use_reloader = True
-
-        # Verify database connection
-        with app.app_context():
-            try:
-                db.session.execute(text('SELECT 1'))
-                logger.info("Database connection verified")
-            except Exception as e:
-                logger.error(f"Database connection failed: {str(e)}")
-                raise
-        
-        # Check if port is available
-        import socket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        try:
-            sock.bind(('0.0.0.0', 5002))
-            sock.close()
-        except socket.error as e:
-            logger.error(f"Port 5002 is already in use: {str(e)}")
-            print("\n===========================================")
-            print("ERROR: Port 5002 is already in use")
-            print("Please stop any other services using this port")
-            print("or change the port number in app.py")
-            print("===========================================\n")
-            raise
-        
-        print("\n===========================================")
-        print("Flask application running on port 5002")
-        print("Access it at: http://localhost:5002")
-        print("If you can't access it, try:")
-        print("1. Check your firewall settings")
-        print("2. Try http://127.0.0.1:5002")
-        print("3. Try http://0.0.0.0:5002")
-        print("4. Run Command Prompt as Administrator")
-        print("5. Check Windows Defender Firewall settings")
-        print("===========================================\n")
-        
-        # Start Flask application with Windows-specific settings
-        try:
-            app.run(
-                host='0.0.0.0',
-                port=5002,
-                debug=True,
-                use_reloader=use_reloader
-            )
-        except Exception as e:
-            logger.error(f"Failed to start Flask server: {str(e)}")
-            print("\n===========================================")
-            print("ERROR: Failed to start Flask server")
-            print("Possible solutions:")
-            print("1. Run Command Prompt as Administrator")
-            print("2. Check Windows Defender Firewall settings")
-            print("3. Try a different port (e.g., 5003)")
-            print("4. Run 'netstat -ano | findstr :5002' to check port usage")
-            print("5. Run 'netsh advfirewall firewall add rule name='Flask' dir=in action=allow protocol=TCP localport=5002' to allow port")
-            print("===========================================\n")
-            raise
-    except Exception as e:
-        logger.error(f"Failed to start application: {str(e)}")
+        logger.error(f"Error submitting fit-up update: {str(e)}")
+        return jsonify({
+            'error': 'Processing error',
+            'message': 'Failed to process fit-up update',
+            'details': str(e)
+        }), 500
